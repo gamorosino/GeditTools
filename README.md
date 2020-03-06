@@ -10,7 +10,7 @@ Check if gedit-plugins is installed.If not, install them as follows:
 1. Enable "Universe" repository
 2. Install gedit-plugins
 3. Activate "Embedded Terminal"
-4. Copy files in the config folder
+4. Copy the tools files in the config folder
 
 #### 1. Enable "Universe" repository
 
