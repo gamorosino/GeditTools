@@ -1,0 +1,30 @@
+#!/bin/bash
+# [Gedit Tool]
+# Name=Run Script
+# Input=nothing
+# Output=output-panel
+# Applicability=all
+# Save-files=nothing
+# Shortcut=F5
+
+
+aa=$GEDIT_CURRENT_DOCUMENT_PATH
+aa=${aa:${#aa}-2:${#aa}}
+if [ "$aa" == "sh" ]; then
+    
+    
+    sh $GEDIT_CURRENT_DOCUMENT_PATH;
+    
+elif [ "$aa" == "py" ]; then
+    
+    
+    python $GEDIT_CURRENT_DOCUMENT_PATH;
+
+elif [ "$aa" == ".m" ]; then
+    
+    
+    matlab -nodesktop -nosplash -r "run('${GEDIT_CURRENT_DOCUMENT_PATH}');quit"
+
+else
+    echo "Wrong file type"
+fi

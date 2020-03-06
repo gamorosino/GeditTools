@@ -1,0 +1,24 @@
+#!/bin/bash
+# [Gedit Tool]
+# Name=Run Script External
+# Input=nothing
+# Output=output-panel
+# Applicability=all
+# Save-files=nothing
+# Shortcut=<Primary>F5
+
+
+aa=$GEDIT_CURRENT_DOCUMENT_PATH
+aa=${aa:${#aa}-2:${#aa}}
+
+if [ "$aa" == "sh" ]; then
+	gnome-terminal -x bash -c "sh $GEDIT_CURRENT_DOCUMENT_PATH; exec bash" 2> "/dev/null"
+elif [ "$aa" == "py" ]; then
+	gnome-terminal -x bash -c "python $GEDIT_CURRENT_DOCUMENT_PATH; exec bash" 2> "/dev/null"
+
+elif [ "$aa" == ".m" ]; then
+    	
+    	gnome-terminal -x bash -c "matlab -nodesktop -nosplash -r 'run '${GEDIT_CURRENT_DOCUMENT_PATH}'' ; quit; exec bash" 2> "/dev/null"		
+else
+	echo "Wrong file type"
+fi

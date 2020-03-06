@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# [Gedit Tool]
+# Name=Execute Current Line
+# Input=nothing
+# Output=output-panel
+# Applicability=all
+# Save-files=nothing
+# Shortcut=<Primary>e
+
+import os
+import subprocess
+aa=os.popen('echo "$GEDIT_CURRENT_DOCUMENT_PATH"').read()
+aa=aa[len(aa)-3:len(aa)-1]
+if aa=='sh':
+    
+    #source ~/.bash_profile 2> /dev/null
+     #subprocess.call('eval "$GEDIT_SELECTED_TEXT"')
+     command=os.system('$GEDIT_SELECTED_TEXT')
+elif aa=='py':
+    
+    command=os.popen('echo "$GEDIT_SELECTED_TEXT"').read()
+    exec(command)
+
+
+else:
+
+    print("Wrong file type")
+
