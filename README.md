@@ -25,8 +25,7 @@ sudo apt install gedit-plugins
 
 #### 3. Activate "Embedded Terminal" *
 
-
-Edit->Preferences->Plugins and check off Embedded Terminal
+Open gedit and then select Edit->Preferences->Plugins and check off Embedded Terminal
 
 * n.b. Compulsory activated for "Run Script" and "Execute Current Line" tools
 
@@ -42,13 +41,13 @@ This command run the current document (script) in the Embedded Terminal. The scr
 
 #### Run Script External
 
-Once gedit is open, it is possible to use the short-cuts (cntrl+F5) or open from the drop-down menu Tools-> Extranl Tools-> Run Script External
+Once gedit is open, it is possible to use the short-cuts (ctrl+F5) or open from the drop-down menu Tools-> Extranl Tools-> Run Script External
 
 This command run the current document (script) in an external gnome-terminal (bash env). The script could be ".sh" (run with bash env) or ".py" (run with python env) or ".m" (run with matlab)
 
 #### Execute Current Line
 
-Once gedit is open, it is possible to use the short-cuts (cntrl+E) or open from the drop-down menu Tools-> Extranl Tools-> Execute Current Line
+Once gedit is open, it is possible to use the short-cuts (ctrl+E) or open from the drop-down menu Tools-> Extranl Tools-> Execute Current Line
 
 This command run the current line selected in the document (script) in the Embedded Terminal. The script could be ".sh" (run with bash env) or ".py" (run with python env).
 
